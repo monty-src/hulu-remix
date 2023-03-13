@@ -9,8 +9,8 @@
 
 /**
  * Configuration object for NextJS application.
- * 
- * 
+ *
+ *
  * @typedef {Object} NextConfig
  * @property {boolean} reactStrictMode - React strict mode.
  * @property {Object} images - NextJS images.
