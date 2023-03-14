@@ -8,32 +8,34 @@
 /** @type {import('tailwindcss').Config} */
 
 /**
- * Files processed by Tailwind CSS.
- * 
- * 
- * @type {string[]}
+ * Configuration for the Tailwind CSS library.
+ *
+ * @typedef {Object} TailwindConfig
+ * @property {string[]} content - An array of globs for the content to be processed by Tailwind.
+ * @property {Object} theme - The configuration object for the theme.
+ * @property {Object} theme.extend - An object to extend the base theme.
+ * @property {Array} plugins - An array of plugins to use with Tailwind.
  */
- export const content = [
-  "./pages/**/*.{js,ts,jsx,tsx}",
-  "./components/**/*.{js,ts,jsx,tsx}",
-  "./app/**/*.{js,ts,jsx,tsx}",
-];
-
-/**
- * Theme settings
- * 
- * 
- * @type {object}
- * @property {object} extend - Overides default theme.
- */
-export const theme = {
-  extend: {},
+ module.exports = {
+  /**
+   * An array of globs for the content to be processed by Tailwind.
+   */
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+  ],
+  /**
+   * The configuration object for the theme.
+   */
+  theme: {
+    /**
+     * An object to extend the base theme.
+     */
+    extend: {},
+  },
+  /**
+   * An array of plugins to use with Tailwind.
+   */
+  plugins: [],
 };
-
-/**
- * Plugins for Tailwind CSS.
- * 
- * 
- * @type {object[]}
- */
-export const plugins = [];
