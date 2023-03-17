@@ -1,7 +1,5 @@
 ## Table of Contents
 
-push
-
 - [Overview](#overview)
 - [Technologies](#technologies)
 - [Setup](#setup)
