@@ -48,6 +48,25 @@ git clone https://github.com/monty-src/hulu-remix.git
 1. **Go to** https://www.themoviedb.org/signup?language=en-US
 2. **Register** Username, Password, Password Confirm, & Email
 3. **Click** Sign up
+4. **Account verification required** Check email
+5. **Click** Profile Dropdown > Settings
+6. **Click** API
+7. **Click** Request an API Key
+8. **Click** Developer
+9. **Click** Accept (Terms & Conditions)
+10. **Application Form**
+  - **Type of Use** Desktop Application
+  - **Application Name** hulu-remix
+  - **Application URL** http://localhost:3000
+  - **Application Summary** In order to create a Hulu clone I need some movie information from your API
+  - **Personal Information**
+11. **Click** Submit
+
+### Create .env
+
+```bash
+cd hulu-remix
+```
 
 ### NPM Install
 
