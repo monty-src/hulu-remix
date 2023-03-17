@@ -1,24 +1,34 @@
-import { forwardRef, ForwardRefRenderFunction } from "react";
+/**
+ * @module components/Thumbnail
+ *
+ *
+ * @author montier.elliott@gmail.com
+ */
 import Image from "next/Image";
 import { ThumbUpIcon } from "@heroicons/react/outline";
+import { forwardRef, ForwardRefRenderFunction } from "react";
 
-interface Result {
-  id: number;
-  backdrop_path: string;
-  poster_path: string;
-  overview: string;
-  title?: string;
-  original_name?: string;
-  media_type?: string;
-  release_date?: string;
-  first_air_date?: string;
-  vote_count: number;
-}
+import type { iResults } from "../types/results.d";
 
+/**
+ * Props
+ *
+ *
+ * @typedef {Object} Props
+ * @property {iResults} results
+ */
 interface Props {
-  result: Result;
+  result: iResults;
 }
 
+/**
+ * Thumbnail component
+ *
+ *
+ * @typedef {Object} Props
+ * @property {Object} result
+ * @returns {JSX.Element}
+ */
 const Thumbnail: ForwardRefRenderFunction<HTMLDivElement, Props> = (
   { result },
   ref
@@ -70,4 +80,5 @@ const Thumbnail: ForwardRefRenderFunction<HTMLDivElement, Props> = (
   );
 };
 
+/** exporting */
 export default forwardRef(Thumbnail);

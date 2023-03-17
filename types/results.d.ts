@@ -12,15 +12,15 @@
  * @interface
  * @typedef {Object} iResults
  * @property {number} id
- * @property {string} backdrop_path
- * @property {string} poster_path
  * @property {string} overview
+ * @property {number} vote_count
+ * @property {string} poster_path
+ * @property {string} backdrop_path
  * @property {string} title
- * @property {string} original_name
  * @property {string} media_type
  * @property {string} release_date
+ * @property {string} original_name
  * @property {string} first_air_date
- * @property {number} vote_count
  */
 export interface iResults {
   id: number;

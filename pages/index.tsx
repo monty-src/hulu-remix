@@ -16,10 +16,11 @@ import Results from "../components/Results";
 import requests from "../utils/requests";
 
 /**
- * Home Props
- *
- *
- * @typedef {iResults[]} Props
+ * Props
+ * 
+ * 
+ * @typedef {Object} Props
+ * @property {iResults[]} results
  */
 interface Props {
   results: iResults[];

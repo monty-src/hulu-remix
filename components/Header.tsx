@@ -4,7 +4,6 @@
  *
  * @author montier.elliott@gmail.com
  */
-
 import Image from "next/Image";
 import {
   BadgeCheckIcon,
@@ -18,8 +17,11 @@ import {
 import HeaderItem from "./HeaderItem";
 
 /**
- * The main header component for the app.
- * @returns The header component.
+ * Header Component
+ *
+ * 
+ * @component
+ * @returns {JSX.Element}
  */
 const Header = (): JSX.Element => {
   return (
@@ -58,4 +60,5 @@ const Header = (): JSX.Element => {
   );
 };
 
+/** exporting */
 export default Header;

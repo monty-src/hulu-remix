@@ -1,7 +1,20 @@
+/**
+ * @module components/Nav
+ *
+ *
+ * @author montier.elliott@gmail.com
+ */
 import { useRouter } from "next/router";
 import requests from "../utils/requests";
 
-const Nav: React.FC = () => {
+/**
+ * Nav component
+ *
+ * 
+ * @component
+ * @returns {JSX.Element}
+ */
+const Nav: React.FC = (): JSX.Element => {
   const router = useRouter();
 
   return (
@@ -50,4 +63,5 @@ const Nav: React.FC = () => {
   );
 };
 
+/** exporting */
 export default Nav;

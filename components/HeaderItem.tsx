@@ -6,12 +6,28 @@
  */
 import React from "react";
 
+/**
+ * Props
+ *
+ *
+ * @typedef {Object} Props
+ * @property {React.FunctionComponent<React.SVGProps<SVGSVGElement>>} Icon
+ * @property {String} title
+ */
 interface Props {
   Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   title: string;
 }
 
-const HeaderItem: React.FC<Props> = ({ Icon, title }) => {
+/**
+ * HeaderItem component
+ *
+ * 
+ * @component
+ * @param {Props} props
+ * @returns {JSX.Element}
+ */
+const HeaderItem: React.FC<Props> = ({ Icon, title }: Props): JSX.Element => {
   return (
     <div
       className="
@@ -42,4 +58,5 @@ const HeaderItem: React.FC<Props> = ({ Icon, title }) => {
   );
 };
 
+/** exporting */
 export default HeaderItem;

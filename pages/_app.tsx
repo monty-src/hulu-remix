@@ -11,7 +11,7 @@ import type { AppProps } from "next/app";
  * NextJS higher-order component, wraps around each page component in application
  *
  *
- * @param {AppProps} props - Component properties
+ * @param {AppProps} props
  * @returns {JSX.Element}
  */
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {

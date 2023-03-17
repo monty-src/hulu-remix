@@ -6,19 +6,26 @@
  */
 import React from "react";
 import FlipMove from "react-flip-move";
-import Thumbnail from "./Thumbnail";
 
+import Thumbnail from "./Thumbnail";
 import type { iResults } from "../types/results.d";
 
+/**
+ * Props
+ *
+ *
+ * @typedef {Object} Props
+ * @property {iResults[]} results
+ */
 interface Props {
   results: iResults[];
 }
 
 /**
- * Renders a list of results using the Thumbnail component
+ * Results component
  *
  *
- * @returns {JSX.Element} - The rendered Results component
+ * @returns {JSX.Element}
  */
 const Results: React.FC<Props> = ({ results }) => {
   return (
@@ -39,4 +46,5 @@ const Results: React.FC<Props> = ({ results }) => {
   );
 };
 
+/** exporting */
 export default Results;
