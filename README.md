@@ -7,6 +7,7 @@
   - [api.themoviedb.org](#apithemoviedborg)
   - [Create .env.local](#create-envlocal)
   - [NPM Install](#npm-install)
+- [Build](#npm-build)
 
 ## Overview
 
@@ -85,7 +86,7 @@ API_KEY={API_KEY}
 npm i
 ```
 
-### NPM Build
+## NPM Build
 
 ```bash
 npm run dev
