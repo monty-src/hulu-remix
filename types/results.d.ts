@@ -10,7 +10,7 @@
  * 
  * 
  * @interface
- * @typedec {Object} iResults
+ * @typedef {Object} iResults
  * @property {number} id
  * @property {string} backdrop_path
  * @property {string} poster_path
