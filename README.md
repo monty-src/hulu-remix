@@ -55,11 +55,11 @@ git clone https://github.com/monty-src/hulu-remix.git
 8. **Click** Developer
 9. **Click** Accept (Terms & Conditions)
 10. **Application Form**
-  - **Type of Use** Desktop Application
-  - **Application Name** hulu-remix
-  - **Application URL** http://localhost:3000
-  - **Application Summary** In order to create a Hulu clone I need some movie information from your API
-  - **Personal Information**
+- **Type of Use** Desktop Application
+- **Application Name** hulu-remix
+- **Application URL** http://localhost:3000
+- **Application Summary** In order to create a Hulu clone I need some movie information from your API
+- **Personal Information**
 11. **Click** Submit
 
 ### Create .env
