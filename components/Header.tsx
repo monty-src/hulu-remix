@@ -48,6 +48,7 @@ const Header = (): JSX.Element => {
         <HeaderItem title="ACCOUNT" Icon={UserIcon} />
       </div>
       <Image
+        alt="Hulu logo"
         className="object-contain"
         src="https://links.papareact.com/ua6"
         width={200}

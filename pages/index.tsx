@@ -19,20 +19,20 @@ import requests from "../utils/requests";
  * Home Props
  *
  *
- * @typedef {Object} Props
- * @property {iResults[]} results - Movie search results
+ * @typedef {iResults[]} Props
  */
 interface Props {
   results: iResults[];
 }
 
 /**
- * Home component
+ * Home Component
  *
  *
+ * @param {Props} props
  * @returns {JSX.Element}
  */
-const Home: NextPage<Props> = ({ results }): JSX.Element => {
+const Home: NextPage<Props> = ({ results }: Props): JSX.Element => {
   return (
     <div>
       <Head>
@@ -52,8 +52,8 @@ const Home: NextPage<Props> = ({ results }): JSX.Element => {
  *
  * @function
  * @async
- * @param {Object} context - Request object
- * @returns {Promise<Props>} - Props containing search results
+ * @param {Object} context
+ * @returns {Promise<Props>}
  */
 export const getServerSideProps: GetServerSideProps<Props> = async (
   context
@@ -61,7 +61,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
   const genre = context.query.genre as string;
   const request = await fetch(
     `https://api.themoviedb.org/3${
-      requests[genre]?.url || requests.fetchTrending.url
+      requests[genre]?.url || requests.trending.url
     }`
   ).then((res) => res.json());
   return {
