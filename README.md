@@ -3,11 +3,11 @@
 - [Overview](#overview)
 - [Technologies](#technologies)
 - [Setup](#setup)
-  - [Clone repository](#clone)
+  - [Clone repository](#clone-repository)
   - [api.themoviedb.org](#apithemoviedborg)
   - [Create .env.local](#create-envlocal)
   - [NPM Install](#npm-install)
-- [Build](#npm-build)
+- [NPM Build](#npm-build)
 
 ## Overview
 
