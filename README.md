@@ -3,6 +3,8 @@
 - [Overview](#overview)
 - [Technologies](#technologies)
 - [Setup](#setup)
+  - [Clone Repo](#clone)
+  - [NPM Install](#npm-install)
 - [API Setup](#api-signup)
 
 ## Overview
