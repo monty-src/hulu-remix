@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-// import Sidebar from "../components/Sidebar";
+import Header from "../components/Header";
 
 /**
  * The Home component for the Hulu Remix app.
@@ -15,10 +15,10 @@ const Home: NextPage = (): JSX.Element => {
         <title>Hulu Remix</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
 
       <main>
         {/* Center */}
-        <p>testing something right now</p>
       </main>
 
       <div>
