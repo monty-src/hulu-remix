@@ -3,29 +3,23 @@
  *
  *
  * @author montier.elliott@gmail.com
- * @description NextJS configuration
  */
 import React from "react";
 import FlipMove from "react-flip-move";
 import Thumbnail from "./Thumbnail";
 
-interface Result {
-  id: number;
-  backdrop_path: string;
-  poster_path: string;
-  overview: string;
-  title?: string;
-  original_name?: string;
-  media_type?: string;
-  release_date?: string;
-  first_air_date?: string;
-  vote_count: number;
-}
+import type { iResults } from "../types/results.d";
 
 interface Props {
-  results: Result[];
+  results: iResults[];
 }
 
+/**
+ * Renders a list of results using the Thumbnail component
+ *
+ *
+ * @returns {JSX.Element} - The rendered Results component
+ */
 const Results: React.FC<Props> = ({ results }) => {
   return (
     <FlipMove
