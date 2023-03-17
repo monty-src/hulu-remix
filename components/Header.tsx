@@ -4,7 +4,7 @@
  *
  * @author montier.elliott@gmail.com
  */
-import Image from "next/Image";
+import Image from "next/image";
 import {
   BadgeCheckIcon,
   CollectionIcon,
