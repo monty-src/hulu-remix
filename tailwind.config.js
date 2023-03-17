@@ -37,5 +37,7 @@
   /**
    * An array of plugins to use with Tailwind.
    */
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 };
