@@ -1,9 +1,16 @@
+/**
+ * @module pages/index
+ *
+ *
+ * @author montier.elliott@gmail.com
+ * @description NextJS configuration
+ */
 import type { NextPage, GetServerSideProps } from "next";
 import Head from "next/head";
 
 import Nav from "../components/Nav";
 import Header from "../components/Header";
-import Results from '../components/Results';
+import Results from "../components/Results";
 
 import requests from "../utils/requests";
 
@@ -43,15 +50,19 @@ const Home: NextPage<Props> = ({ results }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps<Props> = async (context) => {
+export const getServerSideProps: GetServerSideProps<Props> = async (
+  context
+) => {
   const genre = context.query.genre;
   const request = await fetch(
-    `https://api.themoviedb.org/3${requests[genre]?.url || requests.fetchTrending.url
-    }`).then(res => res.json());
+    `https://api.themoviedb.org/3${
+      requests[genre]?.url || requests.fetchTrending.url
+    }`
+  ).then((res) => res.json());
   return {
     props: {
-      results: request.results
-    }
+      results: request.results,
+    },
   };
 };
 

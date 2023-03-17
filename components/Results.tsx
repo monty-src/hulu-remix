@@ -1,3 +1,10 @@
+/**
+ * @module components/Results
+ *
+ *
+ * @author montier.elliott@gmail.com
+ * @description NextJS configuration
+ */
 import React from "react";
 import FlipMove from "react-flip-move";
 import Thumbnail from "./Thumbnail";
@@ -29,8 +36,7 @@ const Results: React.FC<Props> = ({ results }) => {
       sm:grid-cols-2
       xl:grid-cols-3
       2xl:grid-cols-4
-      3xl:grid-cols-5
-      "
+      3xl:grid-cols-5"
     >
       {results.map((result) => (
         <Thumbnail key={result.id} result={result} />
