@@ -3,9 +3,10 @@
 - [Overview](#overview)
 - [Technologies](#technologies)
 - [Setup](#setup)
-  - [Clone Repo](#clone)
+  - [Clone repository](#clone)
+  - [api.themoviedb.org](#apithemoviedborg)
+  - [Create .env.local](#create-envlocal)
   - [NPM Install](#npm-install)
-- [API Setup](#api-signup)
 
 ## Overview
 
@@ -62,7 +63,7 @@ git clone https://github.com/monty-src/hulu-remix.git
 - **Personal Information**
 11. **Click** Submit
 
-### Create .env
+### Create .env.local
 
 1. **Change Directory** into hul-remix
 2. **Create** .env.local
