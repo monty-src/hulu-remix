@@ -4,9 +4,8 @@
  *
  * @author montier.elliott@gmail.com
  */
+import { Console } from "console";
 import type { iMovies } from "../types/movies.d";
-
-const API_KEY = process.env.API_KEY;
 
 /**
  * Movie categories
@@ -17,47 +16,47 @@ const API_KEY = process.env.API_KEY;
 const movies: iMovies = {
   trending: {
     title: "Trending",
-    url: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
+    url: `/trending/all/week?api_key=${process.env.API_KEY}&language=en-US`,
   },
   topRated: {
     title: "Top Rated",
-    url: `/discover/movie?api_key=${API_KEY}&language=en-US`,
+    url: `/discover/movie?api_key=${process.env.API_KEY}&language=en-US`,
   },
   actionsMovies: {
     title: "Action",
-    url: `/trending/all/week?api_key=${API_KEY}&with_genres=28`,
+    url: `/trending/all/week?api_key=${process.env.API_KEY}&with_genres=28`,
   },
   comedyMovies: {
     title: "Comedy ",
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=35`,
+    url: `/discover/movie?api_key=${process.env.API_KEY}&with_genres=35`,
   },
   horrorMovies: {
     title: "Horror",
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
+    url: `/discover/movie?api_key=${process.env.API_KEY}&with_genres=27`,
   },
   romanceMovies: {
     title: "Romance",
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
+    url: `/discover/movie?api_key=${process.env.API_KEY}&with_genres=10749`,
   },
   mystery: {
     title: "Mystery",
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=9648`,
+    url: `/discover/movie?api_key=${process.env.API_KEY}&with_genres=9648`,
   },
   sciFi: {
     title: "Sci-Fi",
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=878`,
+    url: `/discover/movie?api_key=${process.env.API_KEY}&with_genres=878`,
   },
   western: {
     title: "Western",
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=37`,
+    url: `/discover/movie?api_key=${process.env.API_KEY}&with_genres=37`,
   },
   animation: {
     title: "Animation",
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=16`,
+    url: `/discover/movie?api_key=${process.env.API_KEY}&with_genres=16`,
   },
   tVMovie: {
     title: "TV Movies",
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=10770`,
+    url: `/discover/movie?api_key=${process.env.API_KEY}&with_genres=10770`,
   },
 };
 

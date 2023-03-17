@@ -52,10 +52,9 @@ const Header = (): JSX.Element => {
       </div>
       <Image
         alt="Hulu logo"
+        priority={true}
         className="object-contain"
         src={HuluWhite}
-        width={200}
-        height={100}
       />
     </header>
   );

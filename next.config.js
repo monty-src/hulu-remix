@@ -24,15 +24,11 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'image.tmdb.org',
-        port: '',
-        pathname: '**',
-      },
-    ],
-  }
+    domains: ["links.papareact.com", "image.tmdb.org"],
+  },
+  env: {
+    API_KEY: process.env.API_KEY,
+  },
 };
 
 module.exports = nextConfig;

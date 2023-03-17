@@ -51,13 +51,13 @@ const Thumbnail: ForwardRefRenderFunction<HTMLDivElement, Props> = (
     >
       <Image
         alt="test"
+        priority={true}
         src={
           `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
           `${BASE_URL}${result.poster_path}`
         }
         height={1080}
         width={1920}
-        layout="responsive"
       />
       <div className="p-2">
         <p className="truncate max-w-mf">{result.overview}</p>

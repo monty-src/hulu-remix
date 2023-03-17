@@ -5,8 +5,11 @@
  * @author montier.elliott@gmail.com
  */
 import type { NextPage, GetServerSideProps } from "next";
+import { useEffect, useState, useCallback } from "react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
+import { debounce } from "lodash";
 import type { iResults } from "../types/results.d";
 
 import Nav from "../components/Nav";
@@ -17,8 +20,8 @@ import requests from "../utils/requests";
 
 /**
  * Props
- * 
- * 
+ *
+ *
  * @typedef {Object} Props
  * @property {iResults[]} results
  */
@@ -33,7 +36,25 @@ interface Props {
  * @param {Props} props
  * @returns {JSX.Element}
  */
-const Home: NextPage<Props> = ({ results }: Props): JSX.Element => {
+const Home: NextPage<Props> = (): JSX.Element => {
+  const router = useRouter();
+  const [results, setResults] = useState<iResults[]>([]);
+
+  const debouncedFetchResults = useCallback(
+    debounce(async (genre: string) => {
+      const requestUrl = `https://api.themoviedb.org/3${
+        requests[genre]?.url || requests.trending.url
+      }`;
+      const request = await fetch(requestUrl).then((res) => res.json());
+      setResults(request.results);
+    }, 500),
+    []
+  );
+
+  useEffect(() => {
+    debouncedFetchResults(router.query.genre as string);
+  }, [router.query.genre, debouncedFetchResults]);
+
   return (
     <div>
       <Head>
@@ -42,7 +63,7 @@ const Home: NextPage<Props> = ({ results }: Props): JSX.Element => {
       </Head>
       <Header />
       <Nav />
-      <Results results={results} />
+      {results && <Results results={results} />}
     </div>
   );
 };
@@ -56,21 +77,21 @@ const Home: NextPage<Props> = ({ results }: Props): JSX.Element => {
  * @param {Object} context
  * @returns {Promise<Props>}
  */
-export const getServerSideProps: GetServerSideProps<Props> = async (
-  context
-) => {
-  const genre = context.query.genre as string;
-  const request = await fetch(
-    `https://api.themoviedb.org/3${
-      requests[genre]?.url || requests.trending.url
-    }`
-  ).then((res) => res.json());
-  return {
-    props: {
-      results: request.results,
-    },
-  };
-};
+// export const getServerSideProps: GetServerSideProps<Props> = async (
+//   context
+// ) => {
+//   const genre = context.query.genre as string;
+//   const request = await fetch(
+//     `https://api.themoviedb.org/3${
+//       requests[genre]?.url || requests.trending.url
+//     }`
+//   ).then((res) => res.json());
+//   return {
+//     props: {
+//       results: request.results,
+//     },
+//   };
+// };
 
 /** exporting */
 export default Home;
