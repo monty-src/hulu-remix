@@ -13,6 +13,8 @@
 
 **Demo** https://monty-src.github.io/hulu-remix
 
+This repository is part of the monty-src/remix series, and contains a Hulu clone built using Typescript, NextJS, Tailwind CSS and Heroicons.
+
 ## Technologies
 
 ### Typescript
