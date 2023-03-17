@@ -85,4 +85,8 @@ API_KEY={API_KEY}
 npm i
 ```
 
-## API Signup
+### NPM Build
+
+```bash
+npm run dev
+```
