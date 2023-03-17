@@ -24,7 +24,7 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ["links.papareact.com", "image.tmdb.org"],
+    domains: [ "image.tmdb.org"],
   },
   env: {
     API_KEY: process.env.API_KEY,
