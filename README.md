@@ -1,3 +1,5 @@
+[![Deploy Next.js site to Pages](https://github.com/monty-src/hulu-remix/actions/workflows/nextjs.yml/badge.svg)](https://github.com/monty-src/hulu-remix/actions/workflows/nextjs.yml)
+
 ## Table of Contents
 
 - [Overview](#overview)
