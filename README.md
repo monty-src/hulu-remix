@@ -13,6 +13,7 @@
 
 a superset of Javascript that adds optional static typing and other features to the language.
 
+https://www.typescriptlang.org/
 
 ### NextJS
 
@@ -33,5 +34,17 @@ is a set of free, open-source SVT icons that can be easily customized and used i
 https://heroicons.com/
 
 ## Setup
+
+### Clone
+
+```js
+git clone https://github.com/monty-src/hulu-remix.git
+```
+
+### NPM Install
+
+```js
+npm i
+```
 
 ## API Signup
