@@ -37,11 +37,17 @@ https://heroicons.com/
 
 ## Setup
 
-### Clone
+### Clone repository
 
 ```js
 git clone https://github.com/monty-src/hulu-remix.git
 ```
+
+### api.themoviedb.org
+
+1. **Go to** https://www.themoviedb.org/signup?language=en-US
+2. **Register** Username, Password, Password Confirm, & Email
+3. **Click** Sign up
 
 ### NPM Install
 
