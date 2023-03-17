@@ -45,7 +45,7 @@ git clone https://github.com/monty-src/hulu-remix.git
 
 ### api.themoviedb.org
 
-1. **Go to** https://www.themoviedb.org/signup?language=en-US
+1. **Go to** https://www.themoviedb.org/signup
 2. **Register** Username, Password, Password Confirm, & Email
 3. **Click** Sign up
 4. **Account verification required** Check email
@@ -64,8 +64,18 @@ git clone https://github.com/monty-src/hulu-remix.git
 
 ### Create .env
 
+1. **Change Directory** into hul-remix
+2. **Create** .env.local
+
 ```bash
 cd hulu-remix
+touch .env.local
+```
+
+3. **Add** API_KEY generated from api.themoviedb.org
+
+```bash
+API_KEY={API_KEY}
 ```
 
 ### NPM Install
