@@ -15,6 +15,7 @@ import {
 } from "@heroicons/react/outline";
 
 import HeaderItem from "./HeaderItem";
+import HuluWhite from "../public/hulu-white.webp";
 
 /**
  * Header Component
@@ -52,7 +53,7 @@ const Header = (): JSX.Element => {
       <Image
         alt="Hulu logo"
         className="object-contain"
-        src="https://links.papareact.com/ua6"
+        src={HuluWhite}
         width={200}
         height={100}
       />
