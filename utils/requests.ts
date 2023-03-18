@@ -4,7 +4,6 @@
  *
  * @author montier.elliott@gmail.com
  */
-import { Console } from "console";
 import type { iMovies } from "../types/movies.d";
 
 /**

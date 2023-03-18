@@ -4,19 +4,18 @@
  *
  * @author montier.elliott@gmail.com
  */
-import type { NextPage, GetServerSideProps } from "next";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import { debounce } from "lodash";
+import type { NextPage } from "next";
 import type { iResults } from "../types/results.d";
 
 import Nav from "../components/Nav";
 import Header from "../components/Header";
 import Results from "../components/Results";
 
-import requests from "../utils/requests";
+import { useFetchResults } from "../hooks/useFetchResults";
 
 /**
  * Props
@@ -38,22 +37,11 @@ interface Props {
  */
 const Home: NextPage<Props> = (): JSX.Element => {
   const router = useRouter();
-  const [results, setResults] = useState<iResults[]>([]);
-
-  const debouncedFetchResults = useCallback(
-    debounce(async (genre: string) => {
-      const requestUrl = `https://api.themoviedb.org/3${
-        requests[genre]?.url || requests.trending.url
-      }`;
-      const request = await fetch(requestUrl).then((res) => res.json());
-      setResults(request.results);
-    }, 500),
-    []
-  );
+  const [results, fetchResults] = useFetchResults();
 
   useEffect(() => {
-    debouncedFetchResults(router.query.genre as string);
-  }, [router.query.genre, debouncedFetchResults]);
+    fetchResults(router.query.genre as string);
+  }, [router.query.genre, fetchResults]);
 
   return (
     <div>
@@ -67,31 +55,6 @@ const Home: NextPage<Props> = (): JSX.Element => {
     </div>
   );
 };
-
-/**
- * Fetches Home component props on server-side
- *
- *
- * @function
- * @async
- * @param {Object} context
- * @returns {Promise<Props>}
- */
-// export const getServerSideProps: GetServerSideProps<Props> = async (
-//   context
-// ) => {
-//   const genre = context.query.genre as string;
-//   const request = await fetch(
-//     `https://api.themoviedb.org/3${
-//       requests[genre]?.url || requests.trending.url
-//     }`
-//   ).then((res) => res.json());
-//   return {
-//     props: {
-//       results: request.results,
-//     },
-//   };
-// };
 
 /** exporting */
 export default Home;
