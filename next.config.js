@@ -8,14 +8,9 @@
 /** @type {import('next').NextConfig} */
 
 /**
- * Configuration object for NextJS application.
- *
- *
- * @typedef {Object} NextConfig
- */
-
-/**
- * Configuration object for the current NextJS application.
+ * Configuration object for the current NextJS application
+ * 
+ * 
  * @type {NextConfig}
  */
 const nextConfig = {
