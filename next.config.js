@@ -12,9 +12,6 @@
  *
  *
  * @typedef {Object} NextConfig
- * @property {boolean} reactStrictMode - React strict mode.
- * @property {Object} images - NextJS images.
- * @property {string[]} images.domains - Allowed domains for NextJS images.
  */
 
 /**
