@@ -74,7 +74,7 @@ git clone https://github.com/monty-src/hulu-remix.git
 
 ### Create .env.local
 
-1. **Change Directory** into hul-remix
+1. **Change Directory** into hulu-remix
 2. **Create** .env.local
 
 ```bash
