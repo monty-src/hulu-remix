@@ -5,16 +5,19 @@
  * @author montier.elliott@gmail.com
  */
 import { useCallback, useState } from "react";
+
 import debounce from "lodash/debounce";
 import type { DebouncedFunc } from "lodash";
 
 import requests from "../utils/requests";
-import { iResults } from "../types/results";
+import type { iResults } from "../types/results";
 
 /**
- * @interface IRequest
+ * @IRequest
  *
  *
+ * @interface
+ * @typedef {IRequest}
  */
 interface IRequest {
   url: string;
@@ -22,27 +25,30 @@ interface IRequest {
 }
 
 /**
- * @type Hook
+ * Hook
  *
  *
+ * @type
  */
 type Hook = [iResults[], DebouncedFunc<(query: string) => Promise<void>>];
 
 /**
- * @function useFetchResults
+ * Use Fetch Results
  *
  *
- * @returns {}
+ * @function
+ * @returns {Hook}
  */
 export const useFetchResults = (): Hook => {
   const [results, setResults] = useState<iResults[]>([]);
 
   /**
-   * @function fetchResults
-   * @description
+   * Fetch Results
    *
    *
+   * @function
    * @param {string} query
+   * @returns {void}
    */
   const fetchResults = useCallback(
     debounce(async (query: string) => {

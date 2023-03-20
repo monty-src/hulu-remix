@@ -4,38 +4,26 @@
  *
  * @author montier.elliott@gmail.com
  */
-import { useEffect } from "react";
 import Head from "next/head";
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 import type { NextPage } from "next";
-import type { iResults } from "../types/results.d";
+
+import { useFetchResults } from "../hooks/useFetchResults";
 
 import Nav from "../components/Nav";
 import Header from "../components/Header";
 import Results from "../components/Results";
 
-import { useFetchResults } from "../hooks/useFetchResults";
-
-/**
- * Props
- *
- *
- * @typedef {Object} Props
- * @property {iResults[]} results
- */
-interface Props {
-  results: iResults[];
-}
-
 /**
  * Home Component
  *
  *
- * @param {Props} props
+ * @component
  * @returns {JSX.Element}
  */
-const Home: NextPage<Props> = (): JSX.Element => {
+const Home: NextPage = (): JSX.Element => {
   const router = useRouter();
   const [results, fetchResults] = useFetchResults();
 
