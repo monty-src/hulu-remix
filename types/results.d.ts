@@ -11,16 +11,6 @@
  * 
  * @interface
  * @typedef {Object} iResults
- * @property {number} id
- * @property {string} overview
- * @property {number} vote_count
- * @property {string} poster_path
- * @property {string} backdrop_path
- * @property {string} title
- * @property {string} media_type
- * @property {string} release_date
- * @property {string} original_name
- * @property {string} first_air_date
  */
 export interface iResults {
   id: number;

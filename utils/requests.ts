@@ -10,7 +10,7 @@ import type { iMovies } from "../types/movies.d";
  * Movie categories
  *
  *
- * @type {Movies}
+ * @typedef {Movies}
  */
 const movies: iMovies = {
   trending: {
