@@ -29,7 +29,7 @@ https://www.typescriptlang.org/
 
 ### NextJS
 
-a populate React framework for building srver-rendered applications and static websites.
+a popular React framework for building srver-rendered applications and static websites.
 
 https://nextjs.org/
 

@@ -3,7 +3,6 @@
  *
  *
  * @author montier.elliott@gmail.com
- * @description NextJS configuration
  */
 /** @type {import('next').NextConfig} */
 

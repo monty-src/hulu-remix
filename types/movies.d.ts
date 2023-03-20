@@ -11,8 +11,6 @@
  *
  * @interface
  * @typedef {Object} iMovie
- * @property {string} url
- * @property {string} title
  */
 export interface iMovie {
   url: string;
