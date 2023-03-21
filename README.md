@@ -2,6 +2,8 @@
 
 # Hulu Remix
 
+![Hulu Overview](./static/hulu.png)
+
 ## Table of Contents
 
 - [Overview](#overview)
